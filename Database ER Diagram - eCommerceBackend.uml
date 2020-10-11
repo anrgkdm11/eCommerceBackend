@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Persistence</ID>
+  <OriginalElement>JavaeeElement:/666f5f4d/entityManagerFactory/eCommerceBackend/jpa/JPA/PersistenceModel</OriginalElement>
+  <nodes>
+    <node x="133.0" y="485.0">Cart#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Cart.java</node>
+    <node x="79.14285714285714" y="338.0">Item#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Item.java</node>
+    <node x="151.0" y="169.0">User#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/User.java</node>
+    <node x="0.0" y="180.0">Product#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Product.java</node>
+    <node x="310.75" y="103.0">AbstractAuditable#jar://C:/Users/AnrgKdm/.m2/repository/org/springframework/data/spring-data-jpa/2.3.4.RELEASE/spring-data-jpa-2.3.4.RELEASE.jar!/org/springframework/data/jpa/domain/AbstractAuditable.class</node>
+    <node x="80.74999999999999" y="0.0">Orders#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Orders.java</node>
+    <node x="331.0" y="12.0">null#null</node>
+    <node x="363.0" y="0.0">AbstractPersistable#jar://C:/Users/AnrgKdm/.m2/repository/org/springframework/data/spring-data-jpa/2.3.4.RELEASE/spring-data-jpa-2.3.4.RELEASE.jar!/org/springframework/data/jpa/domain/AbstractPersistable.class</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="AbstractAuditable#jar://C:/Users/AnrgKdm/.m2/repository/org/springframework/data/spring-data-jpa/2.3.4.RELEASE/spring-data-jpa-2.3.4.RELEASE.jar!/org/springframework/data/jpa/domain/AbstractAuditable.class" target="AbstractPersistable#jar://C:/Users/AnrgKdm/.m2/repository/org/springframework/data/spring-data-jpa/2.3.4.RELEASE/spring-data-jpa-2.3.4.RELEASE.jar!/org/springframework/data/jpa/domain/AbstractPersistable.class">
+      <point x="40.0" y="-37.5" />
+      <point x="430.75" y="78.0" />
+      <point x="444.5" y="78.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="Cart#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Cart.java" target="Item#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Item.java">
+      <point x="-27.000000000000014" y="-26.5" />
+      <point x="160.0" y="460.0" />
+      <point x="139.64285714285714" y="460.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="User#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/User.java" target="Cart#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Cart.java">
+      <point x="27.5" y="59.5" />
+      <point x="233.5" y="460.0" />
+      <point x="214.0" y="460.0" />
+      <point x="26.999999999999982" y="-26.5" />
+    </edge>
+    <edge source="User#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/User.java" target="Orders#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Orders.java">
+      <point x="0.0" y="-59.5" />
+      <point x="206.0" y="144.0" />
+      <point x="219.5" y="144.0" />
+      <point x="46.25" y="59.5" />
+    </edge>
+    <edge source="Orders#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Orders.java" target="Item#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Item.java">
+      <point x="-46.25" y="59.5" />
+      <point x="126.99999999999999" y="144.0" />
+      <point x="140.5" y="144.0" />
+      <point x="-7.105427357601002E-15" y="-48.5" />
+    </edge>
+    <edge source="AbstractAuditable#jar://C:/Users/AnrgKdm/.m2/repository/org/springframework/data/spring-data-jpa/2.3.4.RELEASE/spring-data-jpa-2.3.4.RELEASE.jar!/org/springframework/data/jpa/domain/AbstractAuditable.class" target="null#null">
+      <point x="-40.0" y="-37.5" />
+      <point x="350.75" y="78.0" />
+      <point x="337.0" y="78.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Item#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Item.java" target="Product#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Product.java">
+      <point x="-40.33333333333334" y="-48.5" />
+      <point x="99.3095238095238" y="313.0" />
+      <point x="65.0" y="313.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="Item#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Item.java" target="User#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/User.java">
+      <point x="40.33333333333334" y="-48.5" />
+      <point x="179.97619047619048" y="313.0" />
+      <point x="178.5" y="313.0" />
+      <point x="-27.5" y="59.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="265.5" y="269.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Embeddables</Category>
+    <Category>Superclasses</Category>
+  </Categories>
+</Diagram>
+
