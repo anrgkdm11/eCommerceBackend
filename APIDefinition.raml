@@ -1,0 +1,145 @@
+#%RAML 1.0
+title: eCommerceBackend
+version: 1.0.0
+baseUri: http://localhost:3000
+mediaType: application/json
+types:
+  User:
+    type: object
+    properties:
+      id:
+        required: true
+        type: integer
+      name:
+        required: true
+        type: string
+  Seller:
+    type: object
+    properties:
+      id:
+        required: true
+        type: integer
+      name:
+        required: true
+        type: string
+  Product:
+    type: object
+    properties:
+      id:
+        required: true
+        type: integer
+      name:
+        required: true
+        type: string
+      price:
+        required: true
+        type: integer
+  Cart:
+    type: object
+    properties:
+      Products:
+        required: true
+        type: array
+      name:
+        required: true
+        type: string
+      price:
+        required: true
+        type: integer
+/products:
+  get:
+    description: List all Products.
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              [
+              { "productId": 1, "name": "LP1", "price": 5656 },
+              { "productId": 2, "name": "LP2", "price": 898 }
+              ]
+/seller:
+  /product:
+    post:
+      description: List all Products.
+      body:
+        properties:
+          name:
+            type: String
+            required: true
+          price:
+            type: Double
+            required: true
+      responses:
+        201:
+          body:
+            type: Product
+            example: { "productId": 9, "name": "Product_9", "price": 5445 }
+
+/cart:
+  /add:
+    post:
+      description: List all Products.
+      body:
+        properties:
+          userId:
+            type: integer
+            required: true
+          productId:
+            type: integer
+            required: true
+          quantity:
+            type: integer
+            required: true
+      responses:
+        201:
+          body:
+            application/json:
+              example:
+                { "items": [ {    "itemId": 1,
+                                  "product": { "productId": 2, "name": "LP2", "price": 898 },
+                                  "quantity": 4
+                             },
+                             {   "itemId": 2,
+                                 "product": { "productId": 2, "name": "LP2", "price": 898 },
+                                 "quantity": 4
+                             }
+                ]
+                }
+/user:
+  post:
+    description: Create a user with a shopping cart allocated
+    body:
+      properties:
+        userId:
+          type: integer
+          required: true
+        productId:
+          type: integer
+          required: true
+        quantity:
+          type: integer
+          required: true
+      example:
+        { "name": "Anurag2", "email": "abc@xyz.com", "phone": "9821114112" }
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              { "userId": 1, "name": "Aniket",
+                "cart": { "cartId": 1, "items": [] }
+              }
+  /{userId}/checkout:
+    post:
+      description: Place an order by making payment
+      body:
+        properties:
+          userId:
+            type: integer
+            required: true
+      responses:
+        200:
+          body:
+            application/json:
+              example:
