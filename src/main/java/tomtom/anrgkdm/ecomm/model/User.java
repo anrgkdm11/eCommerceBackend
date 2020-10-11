@@ -5,10 +5,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -35,5 +35,8 @@ public class User implements Serializable {
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     @JoinColumn(name = "cart_id", referencedColumnName = "cartId", nullable = false)
     private Cart cart;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private List<Orders> orders;
 
 }
