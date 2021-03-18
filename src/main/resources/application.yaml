@@ -20,3 +20,18 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+resilience4j:
+  circuitbreaker:
+    metrics:
+      enabled:
+    instances:
+      productInventoryBreaker:
+        registerHealthIndicator: true
+        automaticTransitionFromOpenToHalfOpenEnabled: false
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        slidingWindowSize: 10
+        waitDurationInOpenState: 10s
+        slidingWindowType: TIME_BASED
+
+

@@ -26,17 +26,17 @@
       <point x="139.64285714285714" y="460.0" />
       <point x="0.0" y="48.5" />
     </edge>
-    <edge source="User#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/User.java" target="Cart#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Cart.java">
-      <point x="27.5" y="59.5" />
-      <point x="233.5" y="460.0" />
-      <point x="214.0" y="460.0" />
-      <point x="26.999999999999982" y="-26.5" />
-    </edge>
     <edge source="User#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/User.java" target="Orders#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Orders.java">
       <point x="0.0" y="-59.5" />
       <point x="206.0" y="144.0" />
       <point x="219.5" y="144.0" />
       <point x="46.25" y="59.5" />
+    </edge>
+    <edge source="User#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/User.java" target="Cart#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Cart.java">
+      <point x="27.5" y="59.5" />
+      <point x="233.5" y="460.0" />
+      <point x="214.0" y="460.0" />
+      <point x="26.999999999999982" y="-26.5" />
     </edge>
     <edge source="Orders#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Orders.java" target="Item#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Item.java">
       <point x="-46.25" y="59.5" />
@@ -63,8 +63,10 @@
       <point x="-27.5" y="59.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="263.0" y="269.0" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.8602150537634409" x="263.0" y="269.0" />
+  <SelectedNodes>
+    <node>Cart#file://E:/WS/eCommerceBackend/src/main/java/tomtom/anrgkdm/ecomm/model/Cart.java</node>
+  </SelectedNodes>
   <Categories>
     <Category>Properties</Category>
     <Category>Embeddables</Category>

@@ -22,6 +22,9 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product addProductToInventory(Product product) {
+        if(product.getPrice()> 5000){
+            throw new RuntimeException("Price is too high");
+        }
         return productRepository.save(product);
     }
 

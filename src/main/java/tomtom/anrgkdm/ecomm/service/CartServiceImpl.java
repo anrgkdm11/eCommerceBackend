@@ -13,6 +13,7 @@ import tomtom.anrgkdm.ecomm.repository.OrderRepo;
 import tomtom.anrgkdm.ecomm.repository.ProductRepository;
 import tomtom.anrgkdm.ecomm.repository.UserRepo;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,6 +74,7 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
+    @Transactional
     public PlaceOrderResponse placeOrder(Integer userId) {
 
         User user = userRepo.findById(userId).orElseThrow(() -> new ECommerceException("No Such User Found In Database!", HttpStatus.BAD_REQUEST));
@@ -81,6 +83,8 @@ public class CartServiceImpl implements CartService {
         if(cart.getItems().isEmpty()){
             throw new ECommerceException("No Items In Cart To Be Ordered...!", HttpStatus.BAD_REQUEST);
         }
+
+        // Check for Payment
 
         Orders orders = new Orders();
         orders.setAmount(cart.getItems().stream().mapToDouble(item -> item.getAmount()).sum());
